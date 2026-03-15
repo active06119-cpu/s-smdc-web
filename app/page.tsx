@@ -7,6 +7,7 @@ import HowItWorks from '@/components/HowItWorks'
 import RevenueEngine from '@/components/RevenueEngine'
 import SSMDCvsESS from '@/components/SSMDCvsESS'
 import ExpansionStrategy from '@/components/ExpansionStrategy'
+import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <RevenueEngine />
       <SSMDCvsESS />
       <ExpansionStrategy />
+      <ContactSection />
       <Footer />
     </main>
   )

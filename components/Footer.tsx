@@ -8,7 +8,7 @@ export default function Footer() {
   const [modal, setModal] = useState<'privacy' | 'terms' | null>(null)
 
   return (
-    <footer id="contact" className="relative min-h-fit block py-16 px-4 sm:px-6 lg:px-8 bg-dark-slate border-t border-gray-800 overflow-visible">
+    <footer className="relative min-h-fit block py-16 px-4 sm:px-6 lg:px-8 bg-dark-slate border-t border-gray-800 overflow-visible">
       <div className="max-w-7xl mx-auto overflow-visible">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -128,10 +128,10 @@ export default function Footer() {
               </div>
               <div className="prose prose-invert prose-slate max-w-none text-sm text-slate-300 space-y-4">
                 <p><strong>Last updated:</strong> 2026</p>
-                <p>S-SMDC (&quot;we&quot;, &quot;us&quot;) respects your privacy. This policy describes how we collect, use, and protect information when you use our website or contact us.</p>
-                <p><strong>Information we collect:</strong> When you contact us (e.g. via email), we may store your email address and message content to respond and maintain business records.</p>
-                <p><strong>Use of information:</strong> We use this information only to respond to inquiries, provide IR materials, and improve our services. We do not sell or share your data with third parties for marketing.</p>
-                <p><strong>Security:</strong> We take reasonable measures to protect your data. Communication over the internet is not guaranteed secure.</p>
+                <p><strong>Information we collect:</strong> When you submit the contact form, we collect your name, email, and optionally your company name.</p>
+                <p><strong>Purpose of use:</strong> We use this information to respond to your business inquiries and to send IR (investor relations) materials you request.</p>
+                <p><strong>Third-party sharing:</strong> We do not share your information with third parties.</p>
+                <p><strong>Retention:</strong> We retain your data for up to one year after your inquiry has been fully addressed.</p>
                 <p><strong>Contact:</strong> For privacy-related questions, contact us at contact@s-smdc.com.</p>
               </div>
             </motion.div>
@@ -165,10 +165,9 @@ export default function Footer() {
               </div>
               <div className="prose prose-invert prose-slate max-w-none text-sm text-slate-300 space-y-4">
                 <p><strong>Last updated:</strong> 2026</p>
-                <p>By using the S-SMDC website (s-smdc.com), you agree to these terms.</p>
-                <p><strong>Use of site:</strong> This site is for informational purposes. Content is provided &quot;as is&quot; without warranties. We do not guarantee accuracy of forward-looking statements or projections.</p>
-                <p><strong>No offer:</strong> Nothing on this site constitutes an offer to sell securities or a solicitation of investment. IR materials are for information only.</p>
-                <p><strong>Intellectual property:</strong> All content, logos, and materials are owned by S-SMDC or licensors. You may not copy or use them without permission.</p>
+                <p>This website is for the purpose of introducing the S-SMDC project.</p>
+                <p><strong>No investment solicitation:</strong> All information on this site is for reference only and does not constitute an offer or solicitation to invest. S-SMDC is a Pre-Seed stage venture.</p>
+                <p><strong>Unauthorized copying:</strong> You may not copy, reproduce, or use any content from this site without prior written permission.</p>
                 <p><strong>Contact:</strong> For questions about these terms, contact us at contact@s-smdc.com.</p>
               </div>
             </motion.div>

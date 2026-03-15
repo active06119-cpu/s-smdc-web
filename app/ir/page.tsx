@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import ContactSection from '@/components/ContactSection'
 import IRHero from '@/components/ir/IRHero'
 import IRRevenueEngine from '@/components/ir/IRRevenueEngine'
 import ERCOTSimulation from '@/components/ir/ERCOTSimulation'
@@ -17,6 +18,7 @@ export default function IRPage() {
         <FinancialPlan />
         <AIEMSModel />
       </div>
+      <ContactSection />
       <Footer />
     </main>
   )
