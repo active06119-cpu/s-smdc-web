@@ -28,19 +28,20 @@ export default function ContactSection() {
     setStatus('submitting')
 
     try {
-      const body = new FormData()
-      body.append('name', formData.name)
-      if (formData.company) body.append('company', formData.company)
-      body.append('email', formData.email)
-      if (formData.inquiry_type) body.append('inquiry_type', formData.inquiry_type)
-      body.append('message', formData.message)
+      const formDataToSend = new FormData()
+      formDataToSend.append('name', formData.name)
+      if (formData.company) formDataToSend.append('company', formData.company)
+      formDataToSend.append('email', formData.email)
+      if (formData.inquiry_type) formDataToSend.append('inquiry_type', formData.inquiry_type)
+      formDataToSend.append('message', formData.message)
 
-      const res = await fetch(FORMSPREE_ACTION, {
+      const response = await fetch(FORMSPREE_ACTION, {
         method: 'POST',
-        body,
+        headers: { Accept: 'application/json' },
+        body: formDataToSend,
       })
 
-      if (res.ok) {
+      if (response.ok) {
         setStatus('success')
         setFormData({ name: '', company: '', email: '', inquiry_type: '', message: '' })
       } else {
@@ -90,7 +91,7 @@ export default function ContactSection() {
             className="rounded-2xl border border-cyan-500/50 bg-cyan-500/10 px-6 py-10 text-center"
           >
             <p className="text-lg font-semibold text-cyan-300">
-              Thank you! We&apos;ll be in touch soon.
+              Message sent successfully!
             </p>
           </motion.div>
         ) : (
@@ -194,7 +195,7 @@ export default function ContactSection() {
 
             {status === 'error' && (
               <p className="mt-3 text-sm text-red-400">
-                Something went wrong. Please try again or email us at contact@s-smdc.com.
+                Something went wrong. Please try again.
               </p>
             )}
 
