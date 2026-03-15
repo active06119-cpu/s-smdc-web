@@ -23,9 +23,46 @@ export default function HowItWorks() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12 overflow-visible">
-          {/* Mode A: Surplus Optimization */}
+          {/* Mode A: Stable Operations (via PPA) / Standard Grid Efficiency / Stable Revenue */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-slate-900/60 backdrop-blur-md p-8 rounded-2xl border-2 border-blue-500/50 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 overflow-visible"
+          >
+            <div className="flex items-center gap-4 mb-6 overflow-visible">
+              <div className="inline-flex p-4 rounded-xl bg-blue-500/20">
+                <Grid3x3 className="w-8 h-8 text-blue-400" />
+              </div>
+              <div className="overflow-visible">
+                <span className="text-sm font-bold text-blue-400 uppercase tracking-wider overflow-visible">Mode A</span>
+                <h3 className="text-xl md:text-2xl font-bold text-white overflow-visible">
+                  Stable Operations (via PPA)
+                </h3>
+                <p className="text-sm text-blue-400 font-semibold overflow-visible">Standard Grid Efficiency · Stable Revenue</p>
+              </div>
+            </div>
+            <div className="space-y-4 overflow-visible">
+              <div className="overflow-visible">
+                <p className="text-base md:text-lg text-slate-300 leading-relaxed overflow-visible">
+                  Providing stable, high-availability AI services via grid-connected operations. Market-leading immersion cooling technology (DataBean) delivers optimized OPEX efficiency for continuous computing operations.
+                </p>
+              </div>
+              <div className="pt-4 border-t border-slate-700 overflow-visible">
+                <div className="flex items-start gap-2 overflow-visible">
+                  <Grid3x3 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-slate-400 overflow-visible">
+                    OPEX reduction: <span className="text-blue-400 font-bold">30%+ optimized savings</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Mode B: Surplus Optimization (via Curtailment) / Max Profit */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -36,9 +73,9 @@ export default function HowItWorks() {
                 <Zap className="w-8 h-8 text-cyan-400" />
               </div>
               <div className="overflow-visible">
-                <span className="text-sm font-bold text-cyan-400 uppercase tracking-wider overflow-visible">Mode A</span>
+                <span className="text-sm font-bold text-cyan-400 uppercase tracking-wider overflow-visible">Mode B</span>
                 <h3 className="text-xl md:text-2xl font-bold text-white overflow-visible">
-                  Surplus Optimization
+                  Surplus Optimization (via Curtailment)
                 </h3>
                 <p className="text-sm text-cyan-400 font-semibold overflow-visible">Max Profit</p>
               </div>
@@ -54,43 +91,6 @@ export default function HowItWorks() {
                   <Clock className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
                   <p className="text-sm text-slate-400 overflow-visible">
                     Energy cost: <span className="text-cyan-400 font-bold">Near-zero marginal cost</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Mode B: Standard Grid Efficiency */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-slate-900/60 backdrop-blur-md p-8 rounded-2xl border-2 border-blue-500/50 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 overflow-visible"
-          >
-            <div className="flex items-center gap-4 mb-6 overflow-visible">
-              <div className="inline-flex p-4 rounded-xl bg-blue-500/20">
-                <Grid3x3 className="w-8 h-8 text-blue-400" />
-              </div>
-              <div className="overflow-visible">
-                <span className="text-sm font-bold text-blue-400 uppercase tracking-wider overflow-visible">Mode B</span>
-                <h3 className="text-xl md:text-2xl font-bold text-white overflow-visible">
-                  Standard Grid Efficiency
-                </h3>
-                <p className="text-sm text-blue-400 font-semibold overflow-visible">Stable Revenue</p>
-              </div>
-            </div>
-            <div className="space-y-4 overflow-visible">
-              <div className="overflow-visible">
-                <p className="text-base md:text-lg text-slate-300 leading-relaxed overflow-visible">
-                  Providing stable, high-availability AI services via grid-connected operations. Market-leading immersion cooling technology (DataBean) delivers optimized OPEX efficiency for continuous computing operations.
-                </p>
-              </div>
-              <div className="pt-4 border-t border-slate-700 overflow-visible">
-                <div className="flex items-start gap-2 overflow-visible">
-                  <Grid3x3 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-slate-400 overflow-visible">
-                    OPEX reduction: <span className="text-blue-400 font-bold">30%+ optimized savings</span>
                   </p>
                 </div>
               </div>

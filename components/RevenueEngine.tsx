@@ -34,7 +34,7 @@ export default function RevenueEngine() {
       subheadline: 'Paid-to-Consume Model',
       benefits: [
         'Earn Rewards for Grid Stabilization (FFR/DR).',
-        'Monetizing Grid Instability.',
+        'Capitalizing on Grid Volatility.',
       ],
       color: 'cyan',
     },

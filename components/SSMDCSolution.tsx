@@ -79,7 +79,7 @@ export default function SSMDCSolution() {
           className="mb-20 overflow-visible"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center overflow-visible">
-            2~3MW Modular Pod Architecture
+            2–3MW Modular Pod Architecture
           </h3>
           <div className="grid md:grid-cols-3 gap-8 overflow-visible">
             {components.map((component, index) => {

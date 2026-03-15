@@ -9,7 +9,7 @@ export default function SSMDCvsESS() {
       icon: TrendingUp,
       title: 'Profit Model',
       smdc: 'Active Computing Revenue',
-      ess: 'Passive Cost Saving',
+      ess: 'Passive Cost Savings',
       smdcColor: 'emerald-green',
       essColor: 'red-400',
     },

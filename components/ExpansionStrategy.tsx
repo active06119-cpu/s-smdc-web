@@ -16,7 +16,7 @@ export default function ExpansionStrategy() {
     },
     {
       phase: 'Phase 2',
-      title: 'Global Growth',
+      title: '2027: Global Growth',
       location: 'Texas ERCOT & Germany',
       description: 'Entering the world\'s largest arbitrage markets. US ERCOT and European power grids expansion.',
       color: 'electric-blue',
@@ -24,7 +24,7 @@ export default function ExpansionStrategy() {
     },
     {
       phase: 'Phase 3',
-      title: 'Global Backbone',
+      title: '2028+: Global Backbone',
       location: 'SE Asia & Middle East',
       description: 'Connecting desert solar farms to the grid. Edge computing supply in infrastructure-deficient regions.',
       color: 'orange-400',

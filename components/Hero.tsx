@@ -46,7 +46,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Proposed Architecture for a Carbon-Neutral Computing Center Powered by <span className="text-cyan-400 font-semibold">Renewable</span> and <span className="text-blue-500 font-semibold">Surplus Energy</span>
+            Diagram: Proposed Architecture for a Carbon-Neutral Computing Center Powered by <span className="text-cyan-400 font-semibold">Renewable</span> and <span className="text-blue-500 font-semibold">Surplus Energy</span>
           </motion.p>
 
           {/* CTA Button */}
