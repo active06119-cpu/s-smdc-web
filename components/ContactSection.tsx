@@ -4,8 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Send } from 'lucide-react'
 
-// Formspree: replace placeholder with your form endpoint (e.g. https://formspree.io/f/xxxxxxxx)
-const FORMSPREE_ACTION = 'https://formspree.io/f/placeholder'
+const FORMSPREE_ACTION = 'https://formspree.io/f/xvzwbdgb'
 
 const INQUIRY_TYPES = [
   'Business Partnership',
@@ -20,7 +19,7 @@ export default function ContactSection() {
     name: '',
     company: '',
     email: '',
-    inquiryType: '' as string,
+    inquiry_type: '',
     message: '',
   })
 
@@ -33,7 +32,7 @@ export default function ContactSection() {
       body.append('name', formData.name)
       if (formData.company) body.append('company', formData.company)
       body.append('email', formData.email)
-      if (formData.inquiryType) body.append('inquiryType', formData.inquiryType)
+      if (formData.inquiry_type) body.append('inquiry_type', formData.inquiry_type)
       body.append('message', formData.message)
 
       const res = await fetch(FORMSPREE_ACTION, {
@@ -43,7 +42,7 @@ export default function ContactSection() {
 
       if (res.ok) {
         setStatus('success')
-        setFormData({ name: '', company: '', email: '', inquiryType: '', message: '' })
+        setFormData({ name: '', company: '', email: '', inquiry_type: '', message: '' })
       } else {
         setStatus('error')
       }
@@ -96,6 +95,8 @@ export default function ContactSection() {
           </motion.div>
         ) : (
           <motion.form
+            action={FORMSPREE_ACTION}
+            method="POST"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -159,8 +160,8 @@ export default function ContactSection() {
               </label>
               <select
                 id="contact-inquiry"
-                name="inquiryType"
-                value={formData.inquiryType}
+                name="inquiry_type"
+                value={formData.inquiry_type}
                 onChange={handleChange}
                 className={inputClass}
                 disabled={status === 'submitting'}
